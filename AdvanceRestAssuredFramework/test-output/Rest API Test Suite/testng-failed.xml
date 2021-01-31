@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Rest API Test Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="com.qa.api.listeners.ExtentReportListener"/>
+    <listener class-name="com.qa.api.listeners.AllureReportListener"/>
+    <listener class-name="com.qa.api.listeners.TesultsListener"/>
+  </listeners>
+  <test thread-count="3" name="Rest API regression Test(failed)" parallel="classes">
+    <classes>
+      <class name="com.qa.api.imgur.tests.GetImgurAPITest">
+        <methods>
+          <include name="setUp"/>
+          <include name="getAccountBlockStatus"/>
+        </methods>
+      </class> <!-- com.qa.api.imgur.tests.GetImgurAPITest -->
+    </classes>
+  </test> <!-- Rest API regression Test(failed) -->
+</suite> <!-- Failed suite [Rest API Test Suite] -->
